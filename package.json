@@ -1,0 +1,9 @@
+{
+  "name": "tq-portal-rt",
+  "version": "0.0.0",
+  "description": "TopicQuests Portal",
+  "main": "index.js",
+  "repository": "https://github.com/topicquests/tq-portal-rt",
+  "author": "wenzowski",
+  "license": "Apache-2.0"
+}
