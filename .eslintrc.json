@@ -1,0 +1,26 @@
+{
+  "extends": "google",
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel",
+    "react"
+  ],
+  "rules": {
+    "babel/no-invalid-this": 2,
+    "babel/semi": 2,
+    "no-invalid-this": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/jsx-uses-vars": [
+      2
+    ],
+    "semi": 0
+  }
+}

@@ -2,8 +2,40 @@
   "name": "tq-portal-rt",
   "version": "0.0.0",
   "description": "TopicQuests Portal",
-  "main": "index.js",
-  "repository": "https://github.com/topicquests/tq-portal-rt",
   "author": "wenzowski",
-  "license": "Apache-2.0"
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "jsonwebtoken": "^7.4.3",
+    "koa": "^2.3.0",
+    "koa-body": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-jwt": "^3.2.2",
+    "koa-router": "^7.2.1",
+    "next": "^3.2.1",
+    "next-routes": "^1.0.40",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "request": "^2.81.0",
+    "semantic-ui-react": "^0.72.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.6.1",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-react": "^7.3.0",
+    "nodemon": "^1.12.0"
+  },
+  "license": "Apache-2.0",
+  "main": "server/index.js",
+  "repository": "https://github.com/topicquests/tq-portal-rt",
+  "scripts": {
+    "bs": "yarn run build && yarn run start",
+    "build": "next=$(yarn bin)/next && cd lib && next build",
+    "dev": "nodemon",
+    "heroku-postbuild": "yarn install --production=true",
+    "heroku-prebuild": "yarn install --production=false && yarn run build",
+    "lint": "eslint=$(yarn bin)/eslint && eslint . --fix",
+    "start": "node server/index.js"
+  }
 }
